@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [Header("References")]
     [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Rigidbody2D rigidBody;
+    [SerializeField] private Animator animator;
+    
+    [Header("Input")]
+    [SerializeField] private float speed = 5f;
     private Vector2 movement;
     private Vector2 screenbounds;
     private float playerHalfWidth;
     private float xPosLastFrame;
-    [SerializeField] private Animator animator;
+    
 
     private void Start()
         {
@@ -39,6 +45,15 @@ public class PlayerMovement : MonoBehaviour
                 Vector2 pos = transform.position; //Get player's current pos
                 pos.x = clampedX; // Reassign the X value to the clamped position
                 transform.position = pos; // Reassign the clamped value back to the player
+                
+        }
+
+    public void KnockbackPlayer(Vector2 knockbackForce, int direction)
+        {
+                knockbackForce.x *= direction;
+                rigidBody.linearVelocity = Vector2.zero;
+                rigidBody.angularVelocity = 0f;
+                rigidBody.AddForce(knockbackForce, ForceMode2D.Impulse);
                 
         }
 
