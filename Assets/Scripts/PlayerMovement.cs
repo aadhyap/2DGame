@@ -1,23 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
+    private Vector2 movement;
 
-    void Update()
-    {
-        float input = 0f;
+    private Vector2 screenbounds;
 
-        if (Keyboard.current != null)
+    private float playerHalfWidth;
+
+    private void Start()
         {
-            if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-                input = -1f;
-            else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-                input = 1f;
+                
+                screenbounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+                playerHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
+                print(playerHalfWidth);
         }
 
-        Vector3 movement = new Vector3(input * speed * Time.deltaTime, 0f, 0f);
-        transform.Translate(movement);
+    //update is called once per frame
+    void Update()
+    {
+        // input will store a value between -1 and +1
+        // GetAxisRaw() takes exactly -1 or +1 
+        // GetAxis() takes a value between and up to -1 and +1 (useful for acceleration)
+        // Getting the axis is mapped to A/D, left/right arrow and joystick left/right
+
+        float input = Input.GetAxis("Horizontal");
+        movement = new Vector2(input, 0f);
+        transform.Translate(movement * speed * Time.deltaTime);
+
+        float clampedX = Mathf.Clamp(transform.position.x, -screenbounds.x + playerHalfWidth, screenbounds.x - playerHalfWidth);
+        Vector2 pos = transform.position; //Get player's current pos
+        pos.x = clampedX; // Reassign the X value to the clamped position
+        transform.position = pos; // Reassign the clamped value back to the player
     }
 }
