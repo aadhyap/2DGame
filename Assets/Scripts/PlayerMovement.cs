@@ -7,11 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Vector2 movement;
-
     private Vector2 screenbounds;
-
     private float playerHalfWidth;
     private float xPosLastFrame;
+    [SerializeField] private Animator animator;
 
     private void Start()
         {
@@ -53,17 +52,26 @@ public class PlayerMovement : MonoBehaviour
                 float input = Input.GetAxis("Horizontal");
                 movement = new Vector2(input, 0f);
                 transform.Translate(movement * speed * Time.deltaTime);
+                if (input != 0)
+                {
+                        animator.SetBool("isRunning", true);
+                }
+                else
+                {
+                        animator.SetBool("isRunning", false);
+                }
                 
         }
 
     private void FlipCharacterX()
         {
-                if (transform.position.x > xPosLastFrame)
+                float input = Input.GetAxis("Horizontal");
+                if (input > 0 && (transform.position.x > xPosLastFrame))
                 {
                         //We are moving right
                         spriteRenderer.flipX = false;
                 }
-                else if (transform.position.x < xPosLastFrame)
+                else if (input < 0 && (transform.position.x < xPosLastFrame))
                 {
                         //we are moving left
                         spriteRenderer.flipX = true;
