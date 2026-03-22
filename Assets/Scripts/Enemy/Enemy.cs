@@ -5,6 +5,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Vector2 knockbackToSelf = new Vector2(3f,3f);
     [SerializeField] private Vector2 knockbackToPlayer = new Vector2(3f,3f);
 
+    [SerializeField] private int damage = 3;
+
     public void Friend()
     {
         
@@ -12,14 +14,11 @@ public class Enemy : MonoBehaviour
 
     public void HitPlayer(Transform playerTransform)
     {
-        if (playerTransform == null)
-        {
-
-            return;
-        }
+        
         int direction = GetDirection(playerTransform);
 
         FindObjectOfType<PlayerMovement>().KnockbackPlayer(knockbackToPlayer, direction);
+        FindObjectOfType<PlayerHealth>().DamagePlayer(damage);
    
     }
 
