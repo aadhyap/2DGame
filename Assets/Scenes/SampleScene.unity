@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   animator: {fileID: 1125013992}
   firePoint: {fileID: 1125013991}
-  fireballPrefab: {fileID: 0}
+  fireballPrefab: {fileID: 700631435454772169, guid: 00ec4941d2f4f47cbb967f5733c85c27, type: 3}
   spriteRenderer: {fileID: 1125013990}
   attackCooldown: 2
   attackRange: 6
@@ -1033,9 +1033,9 @@ GameObject:
   - component: {fileID: 1136053007}
   - component: {fileID: 1136053006}
   - component: {fileID: 1136053008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

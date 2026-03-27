@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3931499311396839036}
   - component: {fileID: 4294388670138222322}
   - component: {fileID: 6358985104334305808}
+  - component: {fileID: 6972268038695280755}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -244,3 +245,18 @@ MonoBehaviour:
   kissKey: 102
   complimentAmount: 2
   kissAmount: 5
+--- !u!114 &6972268038695280755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7494256160530676415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8113abe57d35444f99faac6cc54541f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
+  rigidbody2D: {fileID: 5924897461996674127}
+  spriteRenderer: {fileID: 2210204649853197123}
+  jumpForce: 6
