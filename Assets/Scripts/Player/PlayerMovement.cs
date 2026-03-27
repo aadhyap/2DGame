@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 screenbounds;
     private float playerHalfWidth;
     private float xPosLastFrame;
+    private bool canMove = true;
     
 
     private void Start()
@@ -64,17 +66,24 @@ public class PlayerMovement : MonoBehaviour
                 // GetAxis() takes a value between and up to -1 and +1 (useful for acceleration)
                 // Getting the axis is mapped to A/D, left/right arrow and joystick left/right
 
-                float input = Input.GetAxis("Horizontal");
-                movement = new Vector2(input, 0f);
-                transform.Translate(movement * speed * Time.deltaTime);
-                if (input != 0)
-                {
-                        animator.SetBool("isRunning", true);
-                }
-                else
-                {
-                        animator.SetBool("isRunning", false);
-                }
+                if (!canMove)
+                        {
+                                animator.SetBool("isRunning", false);
+                                return;
+                        }
+
+                        float input = Input.GetAxis("Horizontal");
+                        movement = new Vector2(input, 0f);
+                        transform.Translate(movement * speed * Time.deltaTime);
+
+                        if (input != 0)
+                        {
+                                animator.SetBool("isRunning", true);
+                        }
+                        else
+                        {
+                                animator.SetBool("isRunning", false);
+                        }
                 
         }
 
@@ -95,4 +104,16 @@ public class PlayerMovement : MonoBehaviour
                 xPosLastFrame = transform.position.x;
         
         }
+
+        public void DisableMovement(float duration)
+{
+    StartCoroutine(DisableMovementCoroutine(duration));
+}
+
+private IEnumerator DisableMovementCoroutine(float duration)
+{
+    canMove = false;
+    yield return new WaitForSeconds(duration);
+    canMove = true;
+}
 }

@@ -29,12 +29,14 @@ public class Fireball : MonoBehaviour
     }
 private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("💥 Trigger hit: " + other.name + " | Tag: " + other.tag);
         if (other.CompareTag("Player"))
         {
             Debug.Log("🔥 Fireball hit player");
 
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+            
 
             int direction = moveDirection.x < 0 ? -1 : 1;
 
