@@ -84,12 +84,11 @@ public class EnemyAttack : MonoBehaviour
         if (player.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
-            Debug.Log("➡️ Facing RIGHT");
+   
         }
         else if (player.position.x < transform.position.x)
         {
             spriteRenderer.flipX = false;
-            Debug.Log("⬅️ Facing LEFT");
         }
     }
 
@@ -100,19 +99,20 @@ public class EnemyAttack : MonoBehaviour
 
         if (fireballPrefab == null)
         {
-            Debug.LogError("❌ fireballPrefab is NULL");
+                 Debug.Log("💥 fireball null");
+       
             return;
         }
 
         if (firePoint == null)
         {
-            Debug.LogError("❌ firePoint is NULL");
+    
             return;
         }
 
         if (player == null)
         {
-            Debug.LogError("❌ player is NULL");
+
             return;
         }
 
@@ -124,14 +124,22 @@ public class EnemyAttack : MonoBehaviour
 
         if (fireballScript == null)
         {
-            Debug.LogError("❌ Fireball script NOT FOUND on prefab");
+         
             return;
         }
 
-        Vector2 direction = (player.position - firePoint.position).normalized;
+        Vector2 direction;
 
-        Debug.Log("🎯 Calculated direction: " + direction);
+        if (spriteRenderer.flipX)
+        {
+        direction = Vector2.right;
+        }
+        else
+        {
+        direction = Vector2.left;
+        }
 
+        Debug.Log("🎯 Fireball shooting direction: " + direction);
         fireballScript.SetDirection(direction);
     }
 

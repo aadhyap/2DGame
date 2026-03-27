@@ -5,39 +5,57 @@ public class Fireball : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float speed = 6f;
     [SerializeField] private float lifeTime = 3f;
+    [SerializeField] private int damage = 3;
+    [SerializeField] private Vector2 knockbackToPlayer = new Vector2(3f, 3f);
 
     private Vector2 moveDirection;
 
     private void Start()
     {
-        Debug.Log("🔥 Fireball spawned at: " + transform.position);
+        Debug.Log("🔥 Fireball spawned");
         Destroy(gameObject, lifeTime);
     }
 
     private void Update()
     {
-        Debug.Log("➡️ MoveDirection: " + moveDirection);
-
-        transform.Translate(moveDirection * speed * Time.deltaTime);
+        Debug.Log("➡️ Fireball moving with: " + moveDirection);
+        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
     }
 
     public void SetDirection(Vector2 direction)
     {
         moveDirection = direction.normalized;
-
-        Debug.Log("🎯 Direction SET to: " + moveDirection);
-
-        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        Debug.Log("✅ SetDirection received: " + moveDirection);
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("💥 Hit: " + other.name);
-
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player hit by fireball");
+            Debug.Log("🔥 Fireball hit player");
+
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+
+            int direction = moveDirection.x < 0 ? -1 : 1;
+
+            if (playerHealth != null)
+            {
+                playerHealth.DamagePlayer(damage);
+            }
+            else
+            {
+                Debug.LogError("❌ PlayerHealth not found on player");
+            }
+
+            if (playerMovement != null)
+            {
+                playerMovement.KnockbackPlayer(knockbackToPlayer, direction);
+            }
+            else
+            {
+                Debug.LogError("❌ PlayerMovement not found on player");
+            }
+
             Destroy(gameObject);
         }
 
