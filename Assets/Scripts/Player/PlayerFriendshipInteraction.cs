@@ -14,8 +14,6 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Current enemy is: " + (currentEnemyFriendship == null ? "NULL" : currentEnemyFriendship.gameObject.name));
-
         if (Input.GetKeyDown(complimentKey))
         {
             Debug.Log("E pressed");
@@ -47,31 +45,34 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter2D with: " + other.gameObject.name + " tag: " + other.gameObject.tag);
+        Debug.Log("ENTER hit: " + other.gameObject.name + " | tag: " + other.tag);
 
-        FriendshipLevel friendshipLevel = other.GetComponent<FriendshipLevel>();
+        FriendshipLevel friendshipLevel = other.GetComponentInParent<FriendshipLevel>();
 
         if (friendshipLevel == null)
         {
-            Debug.LogWarning("No FriendshipLevel found on trigger object: " + other.gameObject.name);
+            Debug.LogWarning("No FriendshipLevel found on " + other.gameObject.name + " or its parent.");
             return;
         }
 
         currentEnemyFriendship = friendshipLevel;
         currentEnemyFriendship.SetAsCurrentTarget();
 
-        Debug.Log("Entered interaction range of: " + other.gameObject.name);
+        Debug.Log("Entered interaction range of: " + currentEnemyFriendship.gameObject.name);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("OnTriggerExit2D with: " + other.gameObject.name);
+        Debug.Log("EXIT hit: " + other.gameObject.name);
 
-        FriendshipLevel friendshipLevel = other.GetComponent<FriendshipLevel>();
+        FriendshipLevel friendshipLevel = other.GetComponentInParent<FriendshipLevel>();
 
-        if (friendshipLevel != null && friendshipLevel == currentEnemyFriendship)
+        if (friendshipLevel == null)
+            return;
+
+        if (friendshipLevel == currentEnemyFriendship)
         {
-            Debug.Log("Exited interaction range of: " + other.gameObject.name);
+            Debug.Log("Exited interaction range of: " + currentEnemyFriendship.gameObject.name);
 
             currentEnemyFriendship.ClearAsCurrentTarget();
             currentEnemyFriendship = null;

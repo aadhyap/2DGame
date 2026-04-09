@@ -33,7 +33,8 @@ public class FriendshipLevel : MonoBehaviour
 
     public void AddFriendship(int amount)
     {
-        if (isFriend) return;
+        if (isFriend)
+            return;
 
         Debug.Log("=== AddFriendship CALLED ===");
         Debug.Log("Enemy: " + gameObject.name);
@@ -55,10 +56,10 @@ public class FriendshipLevel : MonoBehaviour
 
     private void BecomeFriend()
     {
-        if (isFriend) return;
+        if (isFriend)
+            return;
 
         isFriend = true;
-
         Debug.Log(gameObject.name + " became a friend");
 
         OnBecameFriend?.Invoke(this);
