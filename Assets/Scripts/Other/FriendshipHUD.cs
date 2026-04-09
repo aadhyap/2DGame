@@ -42,7 +42,7 @@ public class FriendshipHUD : MonoBehaviour
     private void ClearFriendshipBar()
     {
         friendshipBar.value = 0f;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
         Debug.Log("Friendship HUD cleared");
     }

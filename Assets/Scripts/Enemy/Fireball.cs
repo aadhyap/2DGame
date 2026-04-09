@@ -12,27 +12,23 @@ public class Fireball : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("🔥 Fireball spawned");
         Destroy(gameObject, lifeTime);
     }
 
     private void Update()
     {
-        Debug.Log("➡️ Fireball moving with: " + moveDirection);
+
         transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
     }
 
     public void SetDirection(Vector2 direction)
     {
         moveDirection = direction.normalized;
-        Debug.Log("✅ SetDirection received: " + moveDirection);
     }
 private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("💥 Trigger hit: " + other.name + " | Tag: " + other.tag);
         if (other.CompareTag("Player"))
         {
-            Debug.Log("🔥 Fireball hit player");
 
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();

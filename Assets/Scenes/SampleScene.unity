@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 222342461}
   - component: {fileID: 222342460}
   - component: {fileID: 222342464}
-  - component: {fileID: 222342465}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -239,18 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendshipHUD
   friendshipBar: {fileID: 676191368}
---- !u!114 &222342465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222342458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a91ecf3c3c6964835b89c8216b72d25c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FriendshipActionUI
 --- !u!1 &463941157
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +448,9 @@ GameObject:
   - component: {fileID: 522727483}
   - component: {fileID: 522727482}
   - component: {fileID: 522727481}
+  - component: {fileID: 522727486}
   - component: {fileID: 522727484}
+  - component: {fileID: 522727485}
   m_Layer: 5
   m_Name: compliment
   m_TagString: Untagged
@@ -548,6 +537,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &522727485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522727480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1543d4ed7053a401597d5c086527f1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComplimentAnimationEvents
+  player: {fileID: 6358985104334305808, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
+  animator: {fileID: 522727484}
+  stateName: complimentfill
+--- !u!114 &522727486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522727480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dd8c3cbc7dd4436972fea84e9920d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComplimentVisual
+  animator: {fileID: 522727484}
 --- !u!1 &527198984
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,12 +952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556f084cd3e084628a4bbf4eae6e1a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendshipActionCooldownUI
-  complimentAnimator: {fileID: 0}
-  kissAnimator: {fileID: 0}
-  complimentCooldown: 1.5
-  kissCooldown: 3
-  complimentTriggerName: UseCompliment
-  kissTriggerName: UseKiss
+  complimentAnimator: {fileID: 522727484}
+  kissAnimator: {fileID: 1747717900}
 --- !u!1 &1092570741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1748,7 @@ GameObject:
   - component: {fileID: 1747717898}
   - component: {fileID: 1747717897}
   - component: {fileID: 1747717900}
+  - component: {fileID: 1747717901}
   m_Layer: 5
   m_Name: kiss
   m_TagString: Untagged
@@ -1821,6 +1835,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1747717901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747717896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d34a662176c4868a45baefb311090d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KissAnimationEvents
+  player: {fileID: 6358985104334305808, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
+  animator: {fileID: 1747717900}
+  stateName: kissfill
 --- !u!1 &1875908360
 GameObject:
   m_ObjectHideFlags: 0

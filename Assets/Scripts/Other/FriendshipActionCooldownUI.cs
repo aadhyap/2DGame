@@ -1,68 +1,37 @@
-using System.Collections;
 using UnityEngine;
 
-public class FriendshipActionCooldownUI : MonoBehaviour
+public class FriendshipActionVisuals : MonoBehaviour
 {
-    [Header("Animators")]
     [SerializeField] private Animator complimentAnimator;
     [SerializeField] private Animator kissAnimator;
 
-    [Header("Cooldown Times")]
-    [SerializeField] private float complimentCooldown = 1.5f;
-    [SerializeField] private float kissCooldown = 3f;
-
-    [Header("Animator Trigger Names")]
-    [SerializeField] private string complimentTriggerName = "UseCompliment";
-    [SerializeField] private string kissTriggerName = "UseKiss";
-
-    private bool complimentOnCooldown = false;
-    private bool kissOnCooldown = false;
-
-    public bool TryUseCompliment()
+    private void OnEnable()
     {
-        if (complimentOnCooldown)
-            return false;
-
-        StartCoroutine(RunComplimentCooldown());
-        return true;
+        PlayerFriendshipInteraction.ComplimentUsed += PlayCompliment;
+        PlayerFriendshipInteraction.KissUsed += PlayKiss;
     }
 
-    public bool TryUseKiss()
+    private void OnDisable()
     {
-        if (kissOnCooldown)
-            return false;
-
-        StartCoroutine(RunKissCooldown());
-        return true;
+        PlayerFriendshipInteraction.ComplimentUsed -= PlayCompliment;
+        PlayerFriendshipInteraction.KissUsed -= PlayKiss;
     }
 
-    private IEnumerator RunComplimentCooldown()
+    private void PlayCompliment()
     {
-        complimentOnCooldown = true;
+        if (complimentAnimator == null)
+            return;
 
-        if (complimentAnimator != null)
-        {
-            complimentAnimator.ResetTrigger(complimentTriggerName);
-            complimentAnimator.SetTrigger(complimentTriggerName);
-        }
-
-        yield return new WaitForSeconds(complimentCooldown);
-
-        complimentOnCooldown = false;
+        complimentAnimator.ResetTrigger("isCompliment");
+        complimentAnimator.SetTrigger("isCompliment");
     }
 
-    private IEnumerator RunKissCooldown()
+    private void PlayKiss()
     {
-        kissOnCooldown = true;
+        if (kissAnimator == null)
+            return;
 
-        if (kissAnimator != null)
-        {
-            kissAnimator.ResetTrigger(kissTriggerName);
-            kissAnimator.SetTrigger(kissTriggerName);
-        }
-
-        yield return new WaitForSeconds(kissCooldown);
-
-        kissOnCooldown = false;
+        kissAnimator.ResetTrigger("isKissed");
+        kissAnimator.SetTrigger("isKissed");
     }
 }

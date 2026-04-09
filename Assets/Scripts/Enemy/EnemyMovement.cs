@@ -95,11 +95,10 @@ public class EnemyAttack : MonoBehaviour
     // 🔥 IMPORTANT FUNCTION
     public void SpawnFireball()
     {
-        Debug.Log("💥 SpawnFireball CALLED");
+  
 
         if (fireballPrefab == null)
         {
-                 Debug.Log("💥 fireball null");
        
             return;
         }
@@ -116,7 +115,7 @@ public class EnemyAttack : MonoBehaviour
             return;
         }
 
-        Debug.Log("📍 Spawning at: " + firePoint.position);
+
 
         GameObject fireball = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
 
@@ -139,13 +138,13 @@ public class EnemyAttack : MonoBehaviour
         direction = Vector2.left;
         }
 
-        Debug.Log("🎯 Fireball shooting direction: " + direction);
+    
         fireballScript.SetDirection(direction);
     }
 
     public void EndAttack()
     {
-        Debug.Log("🛑 Attack ended");
+       
         animator.SetBool("isAttacking", false);
     }
 }

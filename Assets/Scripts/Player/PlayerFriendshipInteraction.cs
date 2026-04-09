@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 
 public class PlayerFriendshipInteraction : MonoBehaviour
 {
+    public static event Action ComplimentUsed;
+    public static event Action KissUsed;
+
     [Header("Input")]
     [SerializeField] private KeyCode complimentKey = KeyCode.E;
     [SerializeField] private KeyCode kissKey = KeyCode.F;
@@ -12,6 +16,9 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
     private FriendshipLevel currentEnemyFriendship;
 
+    private bool canUseCompliment = true;
+    private bool canUseKiss = true;
+
     private void Update()
     {
         if (Input.GetKeyDown(complimentKey))
@@ -20,12 +27,21 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
             if (currentEnemyFriendship == null)
             {
-                Debug.LogWarning("E pressed but no enemy is currently in range.");
+                Debug.LogWarning("No enemy in range.");
                 return;
             }
 
-            Debug.Log("Complimenting: " + currentEnemyFriendship.gameObject.name);
+            if (!canUseCompliment)
+            {
+                Debug.Log("Compliment not ready yet.");
+                return;
+            }
+
+            canUseCompliment = false;
             currentEnemyFriendship.AddFriendship(complimentAmount);
+            ComplimentUsed?.Invoke();
+
+            Debug.Log("Added compliment friendship");
         }
 
         if (Input.GetKeyDown(kissKey))
@@ -34,37 +50,50 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
             if (currentEnemyFriendship == null)
             {
-                Debug.LogWarning("F pressed but no enemy is currently in range.");
+                Debug.LogWarning("No enemy in range.");
                 return;
             }
 
-            Debug.Log("Kissing: " + currentEnemyFriendship.gameObject.name);
+            if (!canUseKiss)
+            {
+                Debug.Log("Kiss not ready yet.");
+                Debug.Log("Kiss not ready yet. canUseKiss = " + canUseKiss);
+                return;
+            }
+
+            canUseKiss = false;
             currentEnemyFriendship.AddFriendship(kissAmount);
+            KissUsed?.Invoke();
+
+            Debug.Log("Added kiss friendship");
         }
+    }
+
+    public void OnComplimentReady()
+    {
+        canUseCompliment = true;
+        Debug.Log("Compliment ready again");
+    }
+
+    public void OnKissReady()
+    {
+        canUseKiss = true;
+        Debug.Log("Kiss ready again - canUseKiss set to true");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("ENTER hit: " + other.gameObject.name + " | tag: " + other.tag);
-
         FriendshipLevel friendshipLevel = other.GetComponentInParent<FriendshipLevel>();
 
         if (friendshipLevel == null)
-        {
-            Debug.LogWarning("No FriendshipLevel found on " + other.gameObject.name + " or its parent.");
             return;
-        }
 
         currentEnemyFriendship = friendshipLevel;
         currentEnemyFriendship.SetAsCurrentTarget();
-
-        Debug.Log("Entered interaction range of: " + currentEnemyFriendship.gameObject.name);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("EXIT hit: " + other.gameObject.name);
-
         FriendshipLevel friendshipLevel = other.GetComponentInParent<FriendshipLevel>();
 
         if (friendshipLevel == null)
@@ -72,8 +101,6 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
         if (friendshipLevel == currentEnemyFriendship)
         {
-            Debug.Log("Exited interaction range of: " + currentEnemyFriendship.gameObject.name);
-
             currentEnemyFriendship.ClearAsCurrentTarget();
             currentEnemyFriendship = null;
         }
