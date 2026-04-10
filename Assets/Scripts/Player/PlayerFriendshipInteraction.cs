@@ -37,7 +37,6 @@ public class PlayerFriendshipInteraction : MonoBehaviour
                 return;
             }
 
-            canUseCompliment = false;
             currentEnemyFriendship.AddFriendship(complimentAmount);
 
             Debug.Log("Invoking ComplimentUsed event");
