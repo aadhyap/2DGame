@@ -69,7 +69,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
             }
     }
 
-    public void OnComplimentReady()
+    public void OnComplimentReset()
     {
         canUseCompliment = true;
         Debug.Log("Compliment ready again");

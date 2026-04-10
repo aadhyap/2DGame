@@ -61,7 +61,7 @@ public class ComplimentAnimationEvents : MonoBehaviour
         if (player != null)
         {
             Debug.Log("Calling reset on player object: " + player.gameObject.name + " | id=" + player.GetInstanceID());
-            player.OnComplimentReady();
+            player.OnComplimentReset();
         }
         else
         {
