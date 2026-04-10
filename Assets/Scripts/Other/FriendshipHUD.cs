@@ -28,7 +28,7 @@ public class FriendshipHUD : MonoBehaviour
 
         gameObject.SetActive(true);
 
-        Debug.Log("Friendship HUD tracking: " + friendshipLevel.gameObject.name);
+       
     }
 
     private void UpdateFriendshipBar(int currentFriendship, int maxFriendship)
@@ -44,6 +44,6 @@ public class FriendshipHUD : MonoBehaviour
         friendshipBar.value = 0f;
         //gameObject.SetActive(false);
 
-        Debug.Log("Friendship HUD cleared");
+ 
     }
 }

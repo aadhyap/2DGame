@@ -39,9 +39,9 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
             canUseCompliment = false;
             currentEnemyFriendship.AddFriendship(complimentAmount);
-            ComplimentUsed?.Invoke();
 
-            Debug.Log("Added compliment friendship");
+            Debug.Log("Invoking ComplimentUsed event");
+            ComplimentUsed?.Invoke();
         }
 
         if (Input.GetKeyDown(kissKey))
@@ -57,15 +57,13 @@ public class PlayerFriendshipInteraction : MonoBehaviour
             if (!canUseKiss)
             {
                 Debug.Log("Kiss not ready yet.");
-                Debug.Log("Kiss not ready yet. canUseKiss = " + canUseKiss);
                 return;
             }
 
-            canUseKiss = false;
+            Debug.Log("Invoking KissUsed event");
+            //canUseKiss = false;
             currentEnemyFriendship.AddFriendship(kissAmount);
             KissUsed?.Invoke();
-
-            Debug.Log("Added kiss friendship");
         }
     }
 
@@ -78,7 +76,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
     public void OnKissReady()
     {
         canUseKiss = true;
-        Debug.Log("Kiss ready again - canUseKiss set to true");
+        Debug.Log("Kiss ready again");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -90,6 +88,8 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
         currentEnemyFriendship = friendshipLevel;
         currentEnemyFriendship.SetAsCurrentTarget();
+
+       
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -103,6 +103,8 @@ public class PlayerFriendshipInteraction : MonoBehaviour
         {
             currentEnemyFriendship.ClearAsCurrentTarget();
             currentEnemyFriendship = null;
+
+
         }
     }
 }

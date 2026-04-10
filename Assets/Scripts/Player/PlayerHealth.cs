@@ -20,13 +20,9 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     public void DamagePlayer(int damageAmount)
 {
-    Debug.Log("=== DamagePlayer CALLED ===");
-    Debug.Log("Damage received: " + damageAmount);
-    Debug.Log("Health BEFORE damage: " + currentHealth);
+    
 
     currentHealth -= damageAmount;
-
-    Debug.Log("Health AFTER damage: " + currentHealth);
 
     OnPlayerTakeDamage?.Invoke(currentHealth);
 

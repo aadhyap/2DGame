@@ -2,9 +2,24 @@ using UnityEngine;
 
 public class KissAnimationEvents : MonoBehaviour
 {
-    [SerializeField] private PlayerFriendshipInteraction player;
+    [SerializeField] private GameObject playerObject;
     [SerializeField] private Animator animator;
-    [SerializeField] private string stateName = "kissfill";
+    [SerializeField] private string boolName = "canKiss";
+
+    private PlayerFriendshipInteraction player;
+
+    private void Awake()
+    {
+        if (playerObject != null)
+        {
+            player = playerObject.GetComponent<PlayerFriendshipInteraction>();
+        }
+
+        if (player == null)
+        {
+            Debug.LogWarning("PlayerFriendshipInteraction component not found on playerObject.");
+        }
+    }
 
     private void OnEnable()
     {
@@ -16,40 +31,41 @@ public class KissAnimationEvents : MonoBehaviour
         PlayerFriendshipInteraction.KissUsed -= PlayKissFill;
     }
 
-  private void PlayKissFill()
-{
-    if (animator == null)
+    private void PlayKissFill()
     {
-        Debug.LogWarning("Kiss animator is missing.");
-        return;
+        if (animator == null)
+        {
+            Debug.LogWarning("Kiss animator is missing.");
+            return;
+        }
+
+        Debug.Log("PlayKissFill called");
+
+        // Start refill
+        animator.SetBool(boolName, false);
+
+        Debug.Log("Set Animator bool " + boolName + " = false");
     }
 
-    Debug.Log("Before enabling, animator.enabled = " + animator.enabled);
-
-    animator.enabled = true;
-
-    Debug.Log("After enabling, animator.enabled = " + animator.enabled);
-
-    animator.Play(stateName, 0, 0f);
-    animator.Update(0f);
-
-    Debug.Log("Tried to play state: " + stateName);
-}
-
-   public void OnKissReady()
-{
-    Debug.Log("OnKissReady animation event fired");
-
-    if (player != null)
+    public void OnKissReady()
     {
-        player.OnKissReady();
-    }
+        Debug.Log("OnKissReady animation event fired");
 
-    if (animator != null)
-    {
-        Debug.Log("Before disabling, animator.enabled = " + animator.enabled);
-        animator.enabled = false;
-        Debug.Log("After disabling, animator.enabled = " + animator.enabled);
+        if (animator != null)
+        {
+            // Go back to idle / ready
+            animator.SetBool(boolName, true);
+            Debug.Log("Set Animator bool " + boolName + " = true");
+        }
+
+        if (player != null)
+        {
+            Debug.Log("Calling reset on player object: " + player.gameObject.name);
+            player.OnKissReady();
+        }
+        else
+        {
+            Debug.LogWarning("Player reference missing");
+        }
     }
-}
 }

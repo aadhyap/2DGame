@@ -217,7 +217,6 @@ RectTransform:
   - {fileID: 676191369}
   - {fileID: 522727483}
   - {fileID: 1747717899}
-  - {fileID: 1054781334}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -448,7 +447,6 @@ GameObject:
   - component: {fileID: 522727483}
   - component: {fileID: 522727482}
   - component: {fileID: 522727481}
-  - component: {fileID: 522727486}
   - component: {fileID: 522727484}
   - component: {fileID: 522727485}
   m_Layer: 5
@@ -552,19 +550,6 @@ MonoBehaviour:
   player: {fileID: 6358985104334305808, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
   animator: {fileID: 522727484}
   stateName: complimentfill
---- !u!114 &522727486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522727480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dd8c3cbc7dd4436972fea84e9920d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ComplimentVisual
-  animator: {fileID: 522727484}
 --- !u!1 &527198984
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,52 +893,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720216106}
   m_CullTransparentMesh: 1
---- !u!1 &1054781333
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1054781334}
-  - component: {fileID: 1054781335}
-  m_Layer: 5
-  m_Name: FriendshipActionCooldownUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1054781334
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054781333}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 222342463}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1054781335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054781333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 556f084cd3e084628a4bbf4eae6e1a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FriendshipActionCooldownUI
-  complimentAnimator: {fileID: 522727484}
-  kissAnimator: {fileID: 1747717900}
 --- !u!1 &1092570741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,9 +1786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d34a662176c4868a45baefb311090d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KissAnimationEvents
-  player: {fileID: 6358985104334305808, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
+  playerObject: {fileID: 7494256160530676415, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
   animator: {fileID: 1747717900}
-  stateName: kissfill
+  triggerName: isKissed
 --- !u!1 &1875908360
 GameObject:
   m_ObjectHideFlags: 0

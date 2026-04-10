@@ -6,7 +6,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Rigidbody2D rigidBody;
-    [SerializeField] private float bounceForce = 6f;
 
     private float halfHeight;
 
