@@ -4,12 +4,14 @@ using UnityEngine.UI;
 public class FriendshipHUD : MonoBehaviour
 {
     [SerializeField] private Slider friendshipBar;
+    
+    
 
     private void OnEnable()
     {
         FriendshipLevel.OnFriendshipTargetChanged += SetupFriendshipBar;
         FriendshipLevel.OnFriendshipChanged += UpdateFriendshipBar;
-        FriendshipLevel.OnFriendshipTargetCleared += ClearFriendshipBar;
+        //FriendshipLevel.OnFriendshipTargetCleared += ClearFriendshipBar;
     }
 
     private void OnDisable()

@@ -2,33 +2,35 @@ using UnityEngine;
 
 public class ComplimentAnimationEvents : MonoBehaviour
 {
-    [SerializeField] private GameObject playerObject;
     [SerializeField] private Animator animator;
     [SerializeField] private string boolName = "canCompliment";
 
     private PlayerFriendshipInteraction player;
 
-    private void Awake()
-    {
-        if (playerObject != null)
-        {
-            player = playerObject.GetComponent<PlayerFriendshipInteraction>();
-        }
-
-        if (player == null)
-        {
-            Debug.LogWarning("PlayerFriendshipInteraction component not found on playerObject.");
-        }
-    }
-
     private void OnEnable()
     {
         PlayerFriendshipInteraction.ComplimentUsed += PlayComplimentFill;
+        GameController.OnPlayerSpawned += SetPlayerReference;
     }
 
     private void OnDisable()
     {
         PlayerFriendshipInteraction.ComplimentUsed -= PlayComplimentFill;
+        GameController.OnPlayerSpawned -= SetPlayerReference;
+    }
+
+    private void SetPlayerReference(GameObject playerObject)
+    {
+        player = playerObject.GetComponent<PlayerFriendshipInteraction>();
+
+        if (player != null)
+        {
+            Debug.Log("ComplimentAnimationEvents linked to player: " + player.gameObject.name + " | id=" + player.GetInstanceID());
+        }
+        else
+        {
+            Debug.LogWarning("PlayerFriendshipInteraction missing on spawned player object.");
+        }
     }
 
     private void PlayComplimentFill()
@@ -41,7 +43,6 @@ public class ComplimentAnimationEvents : MonoBehaviour
 
         Debug.Log("PlayComplimentFill called");
 
-        // Start refill
         animator.SetBool(boolName, false);
 
         Debug.Log("Set Animator bool " + boolName + " = false");
@@ -53,14 +54,13 @@ public class ComplimentAnimationEvents : MonoBehaviour
 
         if (animator != null)
         {
-            // Go back to idle / ready
             animator.SetBool(boolName, true);
             Debug.Log("Set Animator bool " + boolName + " = true");
         }
 
         if (player != null)
         {
-            Debug.Log("Calling reset on player object: " + player.gameObject.name);
+            Debug.Log("Calling reset on player object: " + player.gameObject.name + " | id=" + player.GetInstanceID());
             player.OnComplimentReady();
         }
         else

@@ -14,6 +14,8 @@ public class FriendshipLevel : MonoBehaviour
     public static Action<FriendshipLevel> OnBecameFriend;
     public static Action OnFriendshipTargetCleared;
 
+    public static System.Action<Transform> OnFriendshipMaxed;
+
     private void Awake()
     {
         currentFriendship = 0;
@@ -60,8 +62,9 @@ public class FriendshipLevel : MonoBehaviour
             return;
 
         isFriend = true;
-        Debug.Log(gameObject.name + " became a friend");
+        Debug.Log("Firing OnFriendshipMaxed for " + gameObject.name);
 
         OnBecameFriend?.Invoke(this);
+        OnFriendshipMaxed?.Invoke(transform);
     }
 }

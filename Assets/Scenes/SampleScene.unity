@@ -665,7 +665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1543d4ed7053a401597d5c086527f1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComplimentAnimationEvents
-  playerObject: {fileID: 0}
   animator: {fileID: 522727484}
   boolName: canCompliment
 --- !u!1 &527198984
@@ -933,8 +932,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 539.386, y: 212.424}
-  m_SizeDelta: {x: 337.09, y: 49.263}
+  m_AnchoredPosition: {x: 561, y: 580}
+  m_SizeDelta: {x: 446.561, y: 104.994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &720216106
 GameObject:
@@ -1411,6 +1410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SetCameraFollow
   vCam: {fileID: 1265667236}
+  focusDuration: 1.5
+  happyTriggerName: Happy
 --- !u!114 &1265667235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1609,8 +1610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.108, y: 322.872}
-  m_SizeDelta: {x: 275.427, y: 44.613}
+  m_AnchoredPosition: {x: -542, y: 583.2}
+  m_SizeDelta: {x: 423.175, y: 89.023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418166371
 MonoBehaviour:
@@ -1905,7 +1906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d34a662176c4868a45baefb311090d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KissAnimationEvents
-  playerObject: {fileID: 7494256160530676415, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
   animator: {fileID: 1747717900}
   boolName: canKiss
 --- !u!1 &1875908360

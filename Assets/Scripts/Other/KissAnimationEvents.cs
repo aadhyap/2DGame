@@ -2,33 +2,31 @@ using UnityEngine;
 
 public class KissAnimationEvents : MonoBehaviour
 {
-    [SerializeField] private GameObject playerObject;
     [SerializeField] private Animator animator;
     [SerializeField] private string boolName = "canKiss";
 
     private PlayerFriendshipInteraction player;
 
-    private void Awake()
-    {
-        if (playerObject != null)
-        {
-            player = playerObject.GetComponent<PlayerFriendshipInteraction>();
-        }
-
-        if (player == null)
-        {
-            Debug.LogWarning("PlayerFriendshipInteraction component not found on playerObject.");
-        }
-    }
-
     private void OnEnable()
     {
         PlayerFriendshipInteraction.KissUsed += PlayKissFill;
+        GameController.OnPlayerSpawned += SetPlayerReference;
     }
 
     private void OnDisable()
     {
         PlayerFriendshipInteraction.KissUsed -= PlayKissFill;
+        GameController.OnPlayerSpawned -= SetPlayerReference;
+    }
+
+    private void SetPlayerReference(GameObject playerObject)
+    {
+        player = playerObject.GetComponent<PlayerFriendshipInteraction>();
+
+        if (player != null)
+        {
+            Debug.Log("KissAnimationEvents linked to player: " + player.gameObject.name + " | id=" + player.GetInstanceID());
+        }
     }
 
     private void PlayKissFill()
@@ -39,11 +37,7 @@ public class KissAnimationEvents : MonoBehaviour
             return;
         }
 
-        Debug.Log("PlayKissFill called");
-
-        // Start refill
         animator.SetBool(boolName, false);
-
         Debug.Log("Set Animator bool " + boolName + " = false");
     }
 
@@ -53,15 +47,14 @@ public class KissAnimationEvents : MonoBehaviour
 
         if (animator != null)
         {
-            // Go back to idle / ready
             animator.SetBool(boolName, true);
             Debug.Log("Set Animator bool " + boolName + " = true");
         }
 
         if (player != null)
         {
-            Debug.Log("Calling reset on player object: " + player.gameObject.name);
-            player.OnKissReady();
+            Debug.Log("Calling reset on player object: " + player.gameObject.name + " | id=" + player.GetInstanceID());
+            player.OnKissReset();
         }
         else
         {

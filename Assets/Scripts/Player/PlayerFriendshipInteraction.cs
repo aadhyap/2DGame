@@ -37,6 +37,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
                 return;
             }
 
+            canUseCompliment = false;
             currentEnemyFriendship.AddFriendship(complimentAmount);
 
             Debug.Log("Invoking ComplimentUsed event");
@@ -44,26 +45,28 @@ public class PlayerFriendshipInteraction : MonoBehaviour
         }
 
         if (Input.GetKeyDown(kissKey))
-        {
-            Debug.Log("F pressed");
-
-            if (currentEnemyFriendship == null)
             {
-                Debug.LogWarning("No enemy in range.");
-                return;
-            }
+                Debug.Log($"F pressed on {gameObject.name} | id={GetInstanceID()} | canUseKiss BEFORE check = {canUseKiss}");
 
-            if (!canUseKiss)
-            {
-                Debug.Log("Kiss not ready yet.");
-                return;
-            }
+                if (currentEnemyFriendship == null)
+                {
+                    Debug.LogWarning("No enemy in range.");
+                    return;
+                }
 
-            Debug.Log("Invoking KissUsed event");
-            //canUseKiss = false;
-            currentEnemyFriendship.AddFriendship(kissAmount);
-            KissUsed?.Invoke();
-        }
+                if (!canUseKiss)
+                {
+                    Debug.Log($"Kiss not ready yet on {gameObject.name} | id={GetInstanceID()} | canUseKiss={canUseKiss}");
+                    return;
+                }
+
+                canUseKiss = false;
+                Debug.Log($"Set canUseKiss = false on {gameObject.name} | id={GetInstanceID()}");
+
+                currentEnemyFriendship.AddFriendship(kissAmount);
+                Debug.Log("Invoking KissUsed event");
+                KissUsed?.Invoke();
+            }
     }
 
     public void OnComplimentReady()
@@ -72,10 +75,11 @@ public class PlayerFriendshipInteraction : MonoBehaviour
         Debug.Log("Compliment ready again");
     }
 
-    public void OnKissReady()
+    public void OnKissReset()
     {
         canUseKiss = true;
-        Debug.Log("Kiss ready again");
+        //Debug.Log("Kiss ready again - canUseKiss is now true");
+        Debug.Log($"Kiss ready again on {gameObject.name} | id={GetInstanceID()} | canUseKiss={canUseKiss}");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -87,8 +91,6 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
         currentEnemyFriendship = friendshipLevel;
         currentEnemyFriendship.SetAsCurrentTarget();
-
-       
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -102,8 +104,6 @@ public class PlayerFriendshipInteraction : MonoBehaviour
         {
             currentEnemyFriendship.ClearAsCurrentTarget();
             currentEnemyFriendship = null;
-
-
         }
     }
 }
