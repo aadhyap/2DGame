@@ -11,9 +11,15 @@ public class EnemyAttack : MonoBehaviour
     [Header("Attack Settings")]
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private float attackRange = 6f;
+    AudioManager audioManager;
 
     private Transform player;
     private float lastAttackTime;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -92,6 +98,11 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
+     public void Firesound()
+    {
+        audioManager.PlaySFX(audioManager.fireball);
+    }
+
     // 🔥 IMPORTANT FUNCTION
     public void SpawnFireball()
     {
@@ -117,7 +128,7 @@ public class EnemyAttack : MonoBehaviour
 
 
 
-        GameObject fireball = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
+        GameObject fireball = Instantiate(fireballPrefab, firePoint.position + new Vector3(0f, 0.2f, 0f), Quaternion.identity);
 
         Fireball fireballScript = fireball.GetComponent<Fireball>();
 

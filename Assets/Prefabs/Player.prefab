@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4294388670138222322}
   - component: {fileID: 6358985104334305808}
   - component: {fileID: 6972268038695280755}
+  - component: {fileID: 6808869722563983700}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -160,8 +161,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0044698417, y: -0.012260556}
-  m_Size: {x: 0.9367191, y: 1.0446701}
+  m_Offset: {x: -0.0044698073, y: 0.04451815}
+  m_Size: {x: 1.0446702, y: 0.93111414}
   m_Direction: 1
 --- !u!114 &2431310499132833496
 MonoBehaviour:
@@ -178,7 +179,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2210204649853197123}
   rigidBody: {fileID: 5924897461996674127}
   animator: {fileID: 2198586066426740480}
-  speed: 5
+  standingCollider: {fileID: 6337918555571086950}
+  duckingCollider: {fileID: 6808869722563983700}
+  speed: 4
 --- !u!95 &2198586066426740480
 Animator:
   serializedVersion: 7
@@ -215,7 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   spriteRenderer: {fileID: 2210204649853197123}
   rigidBody: {fileID: 5924897461996674127}
-  bounceForce: 6
 --- !u!114 &4294388670138222322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +246,7 @@ MonoBehaviour:
   complimentKey: 101
   kissKey: 102
   complimentAmount: 2
-  kissAmount: 5
+  kissAmount: 4
 --- !u!114 &6972268038695280755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,4 +261,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
   rigidbody2D: {fileID: 5924897461996674127}
   spriteRenderer: {fileID: 2210204649853197123}
-  jumpForce: 6
+  jumpForce: 4.8
+--- !u!61 &6808869722563983700
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7494256160530676415}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.08705258}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 1.125}
+    newSize: {x: 0.75, y: 1.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.75, y: 0.5351801}
+  m_EdgeRadius: 0

@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 1be10d4d5041e440580058de233099d9
+guid: c7966393441e34e03b41ce5f544c139a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8448345691231768372
-    second: heartoutanimation_0
+      213: -2286005606849582000
+    second: happyboss1_0
   - first:
-      213: -5724202459082726301
-    second: heartoutanimation_1
+      213: -2365575750371882478
+    second: happyboss1_1
   - first:
-      213: -6547451433460197365
-    second: heartoutanimation_2
+      213: 4737190648341864028
+    second: happyboss1_2
   - first:
-      213: 2305461530028317884
-    second: heartoutanimation_3
+      213: 6737372852634833015
+    second: happyboss1_3
   - first:
-      213: -7453512207397689258
-    second: heartoutanimation_4
+      213: -266511097501501900
+    second: happyboss1_4
   - first:
-      213: -3036426362076822399
-    second: heartoutanimation_5
+      213: -4853060966120313702
+    second: happyboss1_5
   - first:
-      213: 4591855200450196855
-    second: heartoutanimation_6
+      213: 4294592067675950421
+    second: happyboss1_6
   - first:
-      213: 5980311602445871531
-    second: heartoutanimation_7
+      213: 860047038980485315
+    second: happyboss1_7
   - first:
-      213: -4242440157925367878
-    second: heartoutanimation_8
+      213: 1964176352151191707
+    second: happyboss1_8
   - first:
-      213: -877716479192610699
-    second: heartoutanimation_9
+      213: 253093018530915100
+    second: happyboss1_9
   - first:
-      213: 1645075687009404881
-    second: heartoutanimation_10
+      213: 1180024730134641334
+    second: happyboss1_10
   - first:
-      213: -1918733449042832065
-    second: heartoutanimation_11
+      213: 1500808820698481427
+    second: happyboss1_11
   - first:
-      213: -1117045414552878219
-    second: heartoutanimation_12
+      213: 1250492766373506938
+    second: happyboss1_12
   - first:
-      213: -3034470998189798127
-    second: heartoutanimation_13
+      213: -5950827816654002427
+    second: happyboss1_13
   - first:
-      213: 8033110428015660188
-    second: heartoutanimation_14
+      213: -4566845284970762977
+    second: happyboss1_14
   - first:
-      213: 1642352598075744640
-    second: heartoutanimation_15
+      213: -275566023137407073
+    second: happyboss1_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -145,321 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heartoutanimation_0
+      name: happyboss1_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 321
-        width: 45
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc0bd66ea5271ca80800000000000000
-      internalID: -8448345691231768372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 321
-        width: 48
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 364e4fb013c8f80b0800000000000000
-      internalID: -5724202459082726301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_2
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 291
-        width: 45
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b089b747c97c225a0800000000000000
-      internalID: -6547451433460197365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_3
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 293
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbc9aa4fb05aeff10800000000000000
-      internalID: 2305461530028317884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 241
-        width: 48
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 658e505432ecf8890800000000000000
-      internalID: -7453512207397689258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_5
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 245
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18487c5bf427cd5d0800000000000000
-      internalID: -3036426362076822399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 194
-        width: 37
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7753dd2e9fb89bf30800000000000000
-      internalID: 4591855200450196855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_7
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 197
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba9eee5a7b55ef250800000000000000
-      internalID: 5980311602445871531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 148
-        width: 38
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abf910e5723df15c0800000000000000
-      internalID: -4242440157925367878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_9
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 149
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 578c7343389b1d3f0800000000000000
-      internalID: -877716479192610699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 99
-        width: 37
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d7c3d01f9b74d610800000000000000
-      internalID: 1645075687009404881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_11
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 101
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f35542f081a4f55e0800000000000000
-      internalID: -1918733449042832065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 52
-        width: 45
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 573c8932d157f70f0800000000000000
-      internalID: -1117045414552878219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_13
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 53
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11d0ca754b463e5d0800000000000000
-      internalID: -3034470998189798127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_14
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 11
         y: 2
-        width: 45
-        height: 43
+        width: 29
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9c0c5f7f575b7f60800000000000000
-      internalID: 8033110428015660188
+      spriteID: 05ced29230a7640e0800000000000000
+      internalID: -2286005606849582000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_15
+      name: happyboss1_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 5
-        width: 11
-        height: 9
+        x: 59
+        y: 2
+        width: 29
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,8 +182,316 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 081ae348cfecac610800000000000000
-      internalID: 1642352598075744640
+      spriteID: 21a4ecd6369cb2fd0800000000000000
+      internalID: -2365575750371882478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e18b3cbc1edb140800000000000000
+      internalID: 4737190648341864028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 2
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770d8a0d9e4ff7d50800000000000000
+      internalID: 6737372852634833015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43639b0a1992d4cf0800000000000000
+      internalID: -266511097501501900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 2
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ca51193c676acb0800000000000000
+      internalID: -4853060966120313702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d09095bb4799b30800000000000000
+      internalID: 4294592067675950421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0fe88a9308feb00800000000000000
+      internalID: 860047038980485315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90c1325cf7224b10800000000000000
+      internalID: 1964176352151191707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13aaa862ca238300800000000000000
+      internalID: 253093018530915100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_10
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6baf9d17d3a406010800000000000000
+      internalID: 1180024730134641334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_11
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 0
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3138189bba1f3d410800000000000000
+      internalID: 1500808820698481427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_12
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f63edab84aa5110800000000000000
+      internalID: 1250492766373506938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_13
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 0
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50723dc21a96a6da0800000000000000
+      internalID: -5950827816654002427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_14
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d6625d86e4f90c0800000000000000
+      internalID: -4566845284970762977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyboss1_15
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f4ab6792efc2cf0800000000000000
+      internalID: -275566023137407073
       vertices: []
       indices: 
       edges: []
@@ -500,7 +500,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 26059f31bae164c93896e22332e899e0
+    spriteID: 45f8adb8b743846278ac0bcc27d18a97
     internalID: 0
     vertices: []
     indices: 
@@ -510,22 +510,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      heartoutanimation_0: -8448345691231768372
-      heartoutanimation_1: -5724202459082726301
-      heartoutanimation_10: 1645075687009404881
-      heartoutanimation_11: -1918733449042832065
-      heartoutanimation_12: -1117045414552878219
-      heartoutanimation_13: -3034470998189798127
-      heartoutanimation_14: 8033110428015660188
-      heartoutanimation_15: 1642352598075744640
-      heartoutanimation_2: -6547451433460197365
-      heartoutanimation_3: 2305461530028317884
-      heartoutanimation_4: -7453512207397689258
-      heartoutanimation_5: -3036426362076822399
-      heartoutanimation_6: 4591855200450196855
-      heartoutanimation_7: 5980311602445871531
-      heartoutanimation_8: -4242440157925367878
-      heartoutanimation_9: -877716479192610699
+      happyboss1_0: -2286005606849582000
+      happyboss1_1: -2365575750371882478
+      happyboss1_10: 1180024730134641334
+      happyboss1_11: 1500808820698481427
+      happyboss1_12: 1250492766373506938
+      happyboss1_13: -5950827816654002427
+      happyboss1_14: -4566845284970762977
+      happyboss1_15: -275566023137407073
+      happyboss1_2: 4737190648341864028
+      happyboss1_3: 6737372852634833015
+      happyboss1_4: -266511097501501900
+      happyboss1_5: -4853060966120313702
+      happyboss1_6: 4294592067675950421
+      happyboss1_7: 860047038980485315
+      happyboss1_8: 1964176352151191707
+      happyboss1_9: 253093018530915100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,7 +6,7 @@ public class PlayerJump : MonoBehaviour
 {
         [SerializeField] private Rigidbody2D rigidbody2D;
         [SerializeField] private SpriteRenderer spriteRenderer;
-        [SerializeField] private float jumpForce = 6;
+        [SerializeField] private float jumpForce = 4;
         private bool isGrounded;
         private float playerHalfHeight;
 

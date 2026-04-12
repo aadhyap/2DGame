@@ -12,12 +12,18 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
     [Header("Friendship Gain")]
     [SerializeField] private int complimentAmount = 2;
-    [SerializeField] private int kissAmount = 5;
+    [SerializeField] private int kissAmount = 4;
+    AudioManager audioManager;
 
     private FriendshipLevel currentEnemyFriendship;
 
     private bool canUseCompliment = true;
     private bool canUseKiss = true;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Update()
     {
@@ -38,6 +44,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
             }
 
             canUseCompliment = false;
+            audioManager.PlaySFX(audioManager.compliment);
             currentEnemyFriendship.AddFriendship(complimentAmount);
 
             Debug.Log("Invoking ComplimentUsed event");
@@ -46,7 +53,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
         if (Input.GetKeyDown(kissKey))
             {
-                Debug.Log($"F pressed on {gameObject.name} | id={GetInstanceID()} | canUseKiss BEFORE check = {canUseKiss}");
+                
 
                 if (currentEnemyFriendship == null)
                 {
@@ -61,7 +68,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
                 }
 
                 canUseKiss = false;
-                Debug.Log($"Set canUseKiss = false on {gameObject.name} | id={GetInstanceID()}");
+                audioManager.PlaySFX(audioManager.kiss);
 
                 currentEnemyFriendship.AddFriendship(kissAmount);
                 Debug.Log("Invoking KissUsed event");
@@ -78,8 +85,6 @@ public class PlayerFriendshipInteraction : MonoBehaviour
     public void OnKissReset()
     {
         canUseKiss = true;
-        //Debug.Log("Kiss ready again - canUseKiss is now true");
-        Debug.Log($"Kiss ready again on {gameObject.name} | id={GetInstanceID()} | canUseKiss={canUseKiss}");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

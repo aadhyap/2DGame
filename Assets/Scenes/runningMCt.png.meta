@@ -1,55 +1,61 @@
 fileFormatVersion: 2
-guid: 1be10d4d5041e440580058de233099d9
+guid: 87a7494eb34024fc98e178e2a1adcc10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8448345691231768372
-    second: heartoutanimation_0
+      213: 2333269878738527147
+    second: runningMCt_0
   - first:
-      213: -5724202459082726301
-    second: heartoutanimation_1
+      213: 6131616123742123412
+    second: runningMCt_1
   - first:
-      213: -6547451433460197365
-    second: heartoutanimation_2
+      213: 4237838297433947948
+    second: runningMCt_2
   - first:
-      213: 2305461530028317884
-    second: heartoutanimation_3
+      213: 316266260169314
+    second: runningMCt_3
   - first:
-      213: -7453512207397689258
-    second: heartoutanimation_4
+      213: -924556364471734261
+    second: runningMCt_4
   - first:
-      213: -3036426362076822399
-    second: heartoutanimation_5
+      213: 114234537800166903
+    second: runningMCt_5
   - first:
-      213: 4591855200450196855
-    second: heartoutanimation_6
+      213: 1509243841293762410
+    second: runningMCt_6
   - first:
-      213: 5980311602445871531
-    second: heartoutanimation_7
+      213: 55308866280116074
+    second: runningMCt_7
   - first:
-      213: -4242440157925367878
-    second: heartoutanimation_8
+      213: -6040760508436213632
+    second: runningMCt_8
   - first:
-      213: -877716479192610699
-    second: heartoutanimation_9
+      213: 7181562890909222375
+    second: runningMCt_9
   - first:
-      213: 1645075687009404881
-    second: heartoutanimation_10
+      213: -7311619955427132461
+    second: runningMCt_10
   - first:
-      213: -1918733449042832065
-    second: heartoutanimation_11
+      213: 6974772141037137696
+    second: runningMCt_11
   - first:
-      213: -1117045414552878219
-    second: heartoutanimation_12
+      213: -867668315975311786
+    second: runningMCt_12
   - first:
-      213: -3034470998189798127
-    second: heartoutanimation_13
+      213: 5072367871051928048
+    second: runningMCt_13
   - first:
-      213: 8033110428015660188
-    second: heartoutanimation_14
+      213: -2698967818904472434
+    second: runningMCt_14
   - first:
-      213: 1642352598075744640
-    second: heartoutanimation_15
+      213: 1244180603440455098
+    second: runningMCt_15
+  - first:
+      213: 9033323327404925944
+    second: runningMCt_16
+  - first:
+      213: -3208615535721543543
+    second: runningMCt_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -145,35 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heartoutanimation_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 321
-        width: 45
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc0bd66ea5271ca80800000000000000
-      internalID: -8448345691231768372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartoutanimation_1
+      name: runningMCt_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 321
-        width: 48
-        height: 28
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 364e4fb013c8f80b0800000000000000
-      internalID: -5724202459082726301
+      spriteID: ba3245fa790716020800000000000000
+      internalID: 2333269878738527147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_2
+      name: runningMCt_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 291
-        width: 45
-        height: 27
+        x: 14
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +188,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b089b747c97c225a0800000000000000
-      internalID: -6547451433460197365
+      spriteID: 495f4bab060e71550800000000000000
+      internalID: 6131616123742123412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_3
+      name: runningMCt_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 293
-        width: 11
-        height: 9
+        x: 28
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbc9aa4fb05aeff10800000000000000
-      internalID: 2305461530028317884
+      spriteID: c2fb81e7a73dfca30800000000000000
+      internalID: 4237838297433947948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_4
+      name: runningMCt_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 241
-        width: 48
-        height: 34
+        x: 42
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +232,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 658e505432ecf8890800000000000000
-      internalID: -7453512207397689258
+      spriteID: 262871a74af110000800000000000000
+      internalID: 316266260169314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_5
+      name: runningMCt_4
       rect:
         serializedVersion: 2
-        x: 22
-        y: 245
-        width: 11
-        height: 9
+        x: 56
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +254,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18487c5bf427cd5d0800000000000000
-      internalID: -3036426362076822399
+      spriteID: b00f5d092e05b23f0800000000000000
+      internalID: -924556364471734261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_6
+      name: runningMCt_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 194
-        width: 37
-        height: 33
+        x: 70
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7753dd2e9fb89bf30800000000000000
-      internalID: 4591855200450196855
+      spriteID: 7fde8a6f4b7d59100800000000000000
+      internalID: 114234537800166903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_7
+      name: runningMCt_6
       rect:
         serializedVersion: 2
-        x: 22
-        y: 197
-        width: 11
-        height: 9
+        x: 84
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba9eee5a7b55ef250800000000000000
-      internalID: 5980311602445871531
+      spriteID: a6fb2cff649e1f410800000000000000
+      internalID: 1509243841293762410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_8
+      name: runningMCt_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 148
-        width: 38
-        height: 35
+        x: 98
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abf910e5723df15c0800000000000000
-      internalID: -4242440157925367878
+      spriteID: a6f4e8fee1f74c000800000000000000
+      internalID: 55308866280116074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_9
+      name: runningMCt_8
       rect:
         serializedVersion: 2
-        x: 25
-        y: 149
-        width: 11
-        height: 9
+        x: 112
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 578c7343389b1d3f0800000000000000
-      internalID: -877716479192610699
+      spriteID: 0809379a258ea2ca0800000000000000
+      internalID: -6040760508436213632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_10
+      name: runningMCt_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 99
-        width: 37
-        height: 36
+        x: 126
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,20 +364,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d7c3d01f9b74d610800000000000000
-      internalID: 1645075687009404881
+      spriteID: 7e585c456690aa360800000000000000
+      internalID: 7181562890909222375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_11
+      name: runningMCt_10
       rect:
         serializedVersion: 2
-        x: 25
-        y: 101
-        width: 11
-        height: 9
+        x: 140
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,20 +386,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f35542f081a4f55e0800000000000000
-      internalID: -1918733449042832065
+      spriteID: 3dbbb10a368e78a90800000000000000
+      internalID: -7311619955427132461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_12
+      name: runningMCt_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 52
-        width: 45
-        height: 41
+        x: 154
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,20 +408,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 573c8932d157f70f0800000000000000
-      internalID: -1117045414552878219
+      spriteID: 02f2fcfee4e5bc060800000000000000
+      internalID: 6974772141037137696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_13
+      name: runningMCt_12
       rect:
         serializedVersion: 2
-        x: 34
-        y: 53
-        width: 11
-        height: 9
+        x: 168
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,20 +430,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11d0ca754b463e5d0800000000000000
-      internalID: -3034470998189798127
+      spriteID: 65e1e63834c65f3f0800000000000000
+      internalID: -867668315975311786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_14
+      name: runningMCt_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 45
-        height: 43
+        x: 182
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9c0c5f7f575b7f60800000000000000
-      internalID: 8033110428015660188
+      spriteID: 0f1972444bba46640800000000000000
+      internalID: 5072367871051928048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartoutanimation_15
+      name: runningMCt_14
       rect:
         serializedVersion: 2
-        x: 34
-        y: 5
-        width: 11
-        height: 9
+        x: 196
+        y: 0
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,8 +474,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 081ae348cfecac610800000000000000
-      internalID: 1642352598075744640
+      spriteID: e84fcf581175b8ad0800000000000000
+      internalID: -2698967818904472434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runningMCt_15
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abddf78baa7344110800000000000000
+      internalID: 1244180603440455098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runningMCt_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f36837a4bfcc5d70800000000000000
+      internalID: 9033323327404925944
       vertices: []
       indices: 
       edges: []
@@ -500,7 +528,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 26059f31bae164c93896e22332e899e0
+    spriteID: e0cf771791ec147dd8cdfd7915005357
     internalID: 0
     vertices: []
     indices: 
@@ -508,24 +536,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":14.0,"y":18.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      heartoutanimation_0: -8448345691231768372
-      heartoutanimation_1: -5724202459082726301
-      heartoutanimation_10: 1645075687009404881
-      heartoutanimation_11: -1918733449042832065
-      heartoutanimation_12: -1117045414552878219
-      heartoutanimation_13: -3034470998189798127
-      heartoutanimation_14: 8033110428015660188
-      heartoutanimation_15: 1642352598075744640
-      heartoutanimation_2: -6547451433460197365
-      heartoutanimation_3: 2305461530028317884
-      heartoutanimation_4: -7453512207397689258
-      heartoutanimation_5: -3036426362076822399
-      heartoutanimation_6: 4591855200450196855
-      heartoutanimation_7: 5980311602445871531
-      heartoutanimation_8: -4242440157925367878
-      heartoutanimation_9: -877716479192610699
+      runningMCt_0: 2333269878738527147
+      runningMCt_1: 6131616123742123412
+      runningMCt_10: -7311619955427132461
+      runningMCt_11: 6974772141037137696
+      runningMCt_12: -867668315975311786
+      runningMCt_13: 5072367871051928048
+      runningMCt_14: -2698967818904472434
+      runningMCt_15: 1244180603440455098
+      runningMCt_16: 9033323327404925944
+      runningMCt_2: 4237838297433947948
+      runningMCt_3: 316266260169314
+      runningMCt_4: -924556364471734261
+      runningMCt_5: 114234537800166903
+      runningMCt_6: 1509243841293762410
+      runningMCt_7: 55308866280116074
+      runningMCt_8: -6040760508436213632
+      runningMCt_9: 7181562890909222375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

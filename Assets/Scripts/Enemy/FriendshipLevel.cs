@@ -5,6 +5,14 @@ public class FriendshipLevel : MonoBehaviour
 {
     [SerializeField] private int friendship = 10;
 
+    [Header("Heart Effect")]
+    [SerializeField] private GameObject heartEffectPrefab;
+    [SerializeField] private Vector3 heartOffset = new Vector3(0f, 2f, 0f);
+    [SerializeField] private float heartLifetime = 1f;
+    [SerializeField] private Transform heartSpawnPoint;
+    [SerializeField] private Collider2D enemyCollider;
+[SerializeField] private Collider2D playerCollider;
+
     public int currentFriendship { get; private set; }
     public int maxFriendship { get; private set; }
     public bool isFriend { get; private set; }
@@ -14,7 +22,7 @@ public class FriendshipLevel : MonoBehaviour
     public static Action<FriendshipLevel> OnBecameFriend;
     public static Action OnFriendshipTargetCleared;
 
-    public static System.Action<Transform> OnFriendshipMaxed;
+    public static Action<Transform> OnFriendshipMaxed;
 
     private void Awake()
     {
@@ -50,21 +58,54 @@ public class FriendshipLevel : MonoBehaviour
 
         OnFriendshipChanged?.Invoke(currentFriendship, maxFriendship);
 
+        PlayHeartEffect();
+
         if (currentFriendship >= maxFriendship)
         {
             BecomeFriend();
         }
     }
 
+    private void PlayHeartEffect()
+{
+    if (heartEffectPrefab == null)
+    {
+        Debug.LogWarning("Heart effect prefab is missing on " + gameObject.name);
+        return;
+    }
+
+    Vector3 spawnPosition = heartSpawnPoint != null
+        ? heartSpawnPoint.position
+        : transform.position + heartOffset;
+
+    GameObject heart = Instantiate(heartEffectPrefab, spawnPosition, Quaternion.identity, transform);
+Destroy(heart, heartLifetime);
+}
+
     private void BecomeFriend()
     {
-        if (isFriend)
-            return;
+         if (isFriend)
+        return;
 
-        isFriend = true;
-        Debug.Log("Firing OnFriendshipMaxed for " + gameObject.name);
+    isFriend = true;
 
-        OnBecameFriend?.Invoke(this);
-        OnFriendshipMaxed?.Invoke(transform);
+    if (enemyCollider == null)
+    {
+        enemyCollider = GetComponent<Collider2D>();
+    }
+
+    PlayerMovement player = FindFirstObjectByType<PlayerMovement>();
+    if (player != null)
+    {
+        Collider2D playerCol = player.GetComponent<Collider2D>();
+
+        if (enemyCollider != null && playerCol != null)
+        {
+            Physics2D.IgnoreCollision(enemyCollider, playerCol, true);
+        }
+    }
+
+    OnBecameFriend?.Invoke(this);
+    OnFriendshipMaxed?.Invoke(transform);
     }
 }
