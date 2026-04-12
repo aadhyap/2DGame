@@ -12,7 +12,6 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private float attackRange = 6f;
     AudioManager audioManager;
-
     private Transform player;
     private float lastAttackTime;
 

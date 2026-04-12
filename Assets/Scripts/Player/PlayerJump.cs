@@ -1,38 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-        [SerializeField] private Rigidbody2D rigidbody2D;
-        [SerializeField] private SpriteRenderer spriteRenderer;
-        [SerializeField] private float jumpForce = 4;
-        private bool isGrounded;
-        private float playerHalfHeight;
+    [Header("References")]
+    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
 
+    [Header("Settings")]
+    [SerializeField] private float jumpForce = 4f;
+    [SerializeField] private float groundCheckExtra = 0.05f;
+    [SerializeField] private float fallingThreshold = -0.1f;
 
-        private void Start()
+    private float playerHalfHeight;
+
+    private void Start()
+    {
+        playerHalfHeight = spriteRenderer.bounds.extents.y;
+    }
+
+    private void Update()
+    {
+        bool grounded = GetIsGrounded();
+
+        animator.SetBool("isGrounded", grounded);
+
+        if (Input.GetButtonDown("Jump") && grounded)
         {
-                playerHalfHeight = spriteRenderer.bounds.extents.y;
-        }
-        
-        void Update()
-        {
-               
-                if (Input.GetButtonDown("Jump") && GetIsGrounded())
-                {
-                        Jump();
-                }
-                
+            Jump();
         }
 
-        private bool GetIsGrounded()
-        {
-                return Physics2D.Raycast(transform.position, Vector2.down, playerHalfHeight + 0.001f, LayerMask.GetMask("Ground"));
-        }
+        bool isFalling = !grounded && rigidbody2D.linearVelocity.y < fallingThreshold;
+        animator.SetBool("isFalling", isFalling);
+    }
 
-        private void Jump()
-        {
-                rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
+    public bool IsGrounded()
+    {
+        return GetIsGrounded();
+    }
+
+    private bool GetIsGrounded()
+    {
+        return Physics2D.Raycast(
+            transform.position,
+            Vector2.down,
+            playerHalfHeight + groundCheckExtra,
+            LayerMask.GetMask("Ground")
+        );
+    }
+
+    private void Jump()
+    {
+        rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
+        rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (spriteRenderer == null)
+            return;
+
+        Gizmos.color = Color.green;
+        float halfHeight = spriteRenderer.bounds.extents.y;
+        Vector3 start = transform.position;
+        Vector3 end = start + Vector3.down * (halfHeight + groundCheckExtra);
+        Gizmos.DrawLine(start, end);
+    }
 }

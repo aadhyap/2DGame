@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
   rigidbody2D: {fileID: 5924897461996674127}
   spriteRenderer: {fileID: 2210204649853197123}
+  animator: {fileID: 2198586066426740480}
   jumpForce: 4.8
 --- !u!61 &6808869722563983700
 BoxCollider2D:

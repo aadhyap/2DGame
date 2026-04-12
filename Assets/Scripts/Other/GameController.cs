@@ -8,11 +8,15 @@ public class GameController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject enemyPrefab;
     private GameObject player;
+    private GameObject enemy;
     public static Action<GameObject> OnPlayerSpawned;
+    public static Action<GameObject> OnEnemySpawned;
     private void Awake()
     {
         player = Instantiate(playerPrefab);
+        enemy =  Instantiate(enemyPrefab);
         
     }
 
@@ -20,6 +24,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         OnPlayerSpawned?.Invoke(player);
+        OnEnemySpawned?.Invoke(enemy);
         
     }
 
