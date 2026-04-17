@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: blushidle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,21 +22,21 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 5812821929168877203, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.11666667
+    - time: 0.1
       value: {fileID: 3590519822817041902, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.23333333
+    - time: 0.2
       value: {fileID: -6106327708142311785, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.33333334
+    - time: 0.28333333
       value: {fileID: 7520897815852714729, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.45
+    - time: 0.38333333
       value: {fileID: 5937299813339847499, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.5833333
+    - time: 0.48333332
       value: {fileID: -1464898934613332959, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.68333334
+    - time: 0.56666666
       value: {fileID: -575325755550913648, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.8
+    - time: 0.6666667
       value: {fileID: 286311628968600178, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
-    - time: 0.9166667
+    - time: 0.76666665
       value: {fileID: -7373358328717714766, guid: 6fd0f32445ffd4579b3e1e3f64394ee0, type: 3}
     attribute: m_Sprite
     path: 
@@ -74,7 +74,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.93333334
+    m_StopTime: 0.7833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
