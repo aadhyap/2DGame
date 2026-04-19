@@ -44,7 +44,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
             }
 
             canUseCompliment = false;
-            audioManager.PlaySFX(audioManager.compliment);
+            audioManager.PlayRandomCompliment();
             currentEnemyFriendship.AddFriendship(complimentAmount);
 
             Debug.Log("Invoking ComplimentUsed event");

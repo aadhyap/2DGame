@@ -154,7 +154,8 @@ public class EnemyAttack : MonoBehaviour
 
     public void EndAttack()
     {
-       
-        animator.SetBool("isAttacking", false);
+
+        
+       animator.SetBool("isAttacking", false);
     }
 }

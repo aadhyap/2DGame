@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb40d0ab03807428bb6d18e505cf0df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightEndTrigger
-  nextSceneName: IntroScene
+  nextSceneName: EndScene
   delay: 1
 --- !u!61 &8233133668082075734
 BoxCollider2D:

@@ -23,12 +23,14 @@ public class FriendshipLevel : MonoBehaviour
     public static Action OnFriendshipTargetCleared;
 
     public static Action<Transform> OnFriendshipMaxed;
+    AudioManager audioManager;
 
     private void Awake()
     {
         currentFriendship = 0;
         maxFriendship = friendship;
         isFriend = false;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void SetAsCurrentTarget()
@@ -62,9 +64,19 @@ public class FriendshipLevel : MonoBehaviour
 
         if (currentFriendship >= maxFriendship)
         {
+            
             BecomeFriend();
+            Invoke(nameof(PlayEnemyVoice), 2f);
         }
     }
+
+    private void PlayEnemyVoice()
+{
+    BecomeFriend();
+    Debug.Log("RANDOM VOICE");
+    audioManager.PlayRandomEnemyVoice();
+}
+
 
     private void PlayHeartEffect()
 {

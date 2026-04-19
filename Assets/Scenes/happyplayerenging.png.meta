@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 4cd7f020653344cddad9c036eb6d0ac4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2275647771700208837
+    second: happyplayerenging_0
+  - first:
+      213: -5916282302686669636
+    second: happyplayerenging_1
+  - first:
+      213: 2538863183748361319
+    second: happyplayerenging_2
+  - first:
+      213: 3704759597619790293
+    second: happyplayerenging_3
+  - first:
+      213: 2730115085253643476
+    second: happyplayerenging_4
+  - first:
+      213: 9218626107026747394
+    second: happyplayerenging_5
+  - first:
+      213: 8458847903100038131
+    second: happyplayerenging_6
+  - first:
+      213: -8696894302179503992
+    second: happyplayerenging_7
+  - first:
+      213: 8738443352485824072
+    second: happyplayerenging_8
+  - first:
+      213: 8552561074053262591
+    second: happyplayerenging_9
+  - first:
+      213: 6326241391085383633
+    second: happyplayerenging_10
+  - first:
+      213: -1428449674069431566
+    second: happyplayerenging_11
+  - first:
+      213: 1441430701083377318
+    second: happyplayerenging_12
+  - first:
+      213: -4719360653492061435
+    second: happyplayerenging_13
+  - first:
+      213: -5035832982146014319
+    second: happyplayerenging_14
+  - first:
+      213: 288668196875844543
+    second: happyplayerenging_15
+  - first:
+      213: -1699206746698801975
+    second: happyplayerenging_16
+  - first:
+      213: 6019299328346786434
+    second: happyplayerenging_17
+  - first:
+      213: -9065340381121579072
+    second: happyplayerenging_18
+  - first:
+      213: 2220409111915495464
+    second: happyplayerenging_19
+  - first:
+      213: -8810689338430204826
+    second: happyplayerenging_20
+  - first:
+      213: 7975838071083521952
+    second: happyplayerenging_21
+  - first:
+      213: 6980851158566589226
+    second: happyplayerenging_22
+  - first:
+      213: 204474364953539632
+    second: happyplayerenging_23
+  - first:
+      213: -5619846399426328721
+    second: happyplayerenging_24
+  - first:
+      213: 7767312707839790863
+    second: happyplayerenging_25
+  - first:
+      213: -197083205535175865
+    second: happyplayerenging_26
+  - first:
+      213: -6654005718575548884
+    second: happyplayerenging_27
+  - first:
+      213: -3927098722253893259
+    second: happyplayerenging_28
+  - first:
+      213: -7655237323138990231
+    second: happyplayerenging_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 98
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: happyplayerenging_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b56e598664b60e0800000000000000
+      internalID: -2275647771700208837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb45e6d679425eda0800000000000000
+      internalID: -5916282302686669636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c63a83d9adb3320800000000000000
+      internalID: 2538863183748361319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_3
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1c852b933f96330800000000000000
+      internalID: 3704759597619790293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_4
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc8a7c843153e520800000000000000
+      internalID: 2730115085253643476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_5
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200b87a1a932fef70800000000000000
+      internalID: 9218626107026747394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbe559d95dd36570800000000000000
+      internalID: 8458847903100038131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_7
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880d875d5bc6e4780800000000000000
+      internalID: -8696894302179503992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_8
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8468aca4eef254970800000000000000
+      internalID: 8738443352485824072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_9
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc27c2cbfcc0b670800000000000000
+      internalID: 8552561074053262591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_10
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df640ff6035bc750800000000000000
+      internalID: 6326241391085383633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_11
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2faa195f6902d2ce0800000000000000
+      internalID: -1428449674069431566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_12
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aeba6ae59df00410800000000000000
+      internalID: 1441430701083377318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_13
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b76a96d76718eb0800000000000000
+      internalID: -4719360653492061435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_14
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 193adfe65902d1ab0800000000000000
+      internalID: -5035832982146014319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_15
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbbcb4123e810400800000000000000
+      internalID: 288668196875844543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_16
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc121777743b68e0800000000000000
+      internalID: -1699206746698801975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_17
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a8bd6f8d8d88350800000000000000
+      internalID: 6019299328346786434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_18
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c77e3f14f0713280800000000000000
+      internalID: -9065340381121579072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_19
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82083c3b25a70de10800000000000000
+      internalID: 2220409111915495464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_20
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664db8c4ab42ab580800000000000000
+      internalID: -8810689338430204826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_21
+      rect:
+        serializedVersion: 2
+        x: 2642
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a758f4c77edfae60800000000000000
+      internalID: 7975838071083521952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_22
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a235c308427f0e060800000000000000
+      internalID: 6980851158566589226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_23
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034bab00a5076d200800000000000000
+      internalID: 204474364953539632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_24
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f678fe5997b4202b0800000000000000
+      internalID: -5619846399426328721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_25
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f0b2a31c90bcb60800000000000000
+      internalID: 7767312707839790863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_26
+      rect:
+        serializedVersion: 2
+        x: 3262
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b61e66ed1d34df0800000000000000
+      internalID: -197083205535175865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_27
+      rect:
+        serializedVersion: 2
+        x: 3386
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26f2eaad0938a3a0800000000000000
+      internalID: -6654005718575548884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_28
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5719a2ec4842089c0800000000000000
+      internalID: -3927098722253893259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happyplayerenging_29
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 25
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ffcfab63223c590800000000000000
+      internalID: -7655237323138990231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      happyplayerenging_0: -2275647771700208837
+      happyplayerenging_1: -5916282302686669636
+      happyplayerenging_10: 6326241391085383633
+      happyplayerenging_11: -1428449674069431566
+      happyplayerenging_12: 1441430701083377318
+      happyplayerenging_13: -4719360653492061435
+      happyplayerenging_14: -5035832982146014319
+      happyplayerenging_15: 288668196875844543
+      happyplayerenging_16: -1699206746698801975
+      happyplayerenging_17: 6019299328346786434
+      happyplayerenging_18: -9065340381121579072
+      happyplayerenging_19: 2220409111915495464
+      happyplayerenging_2: 2538863183748361319
+      happyplayerenging_20: -8810689338430204826
+      happyplayerenging_21: 7975838071083521952
+      happyplayerenging_22: 6980851158566589226
+      happyplayerenging_23: 204474364953539632
+      happyplayerenging_24: -5619846399426328721
+      happyplayerenging_25: 7767312707839790863
+      happyplayerenging_26: -197083205535175865
+      happyplayerenging_27: -6654005718575548884
+      happyplayerenging_28: -3927098722253893259
+      happyplayerenging_29: -7655237323138990231
+      happyplayerenging_3: 3704759597619790293
+      happyplayerenging_4: 2730115085253643476
+      happyplayerenging_5: 9218626107026747394
+      happyplayerenging_6: 8458847903100038131
+      happyplayerenging_7: -8696894302179503992
+      happyplayerenging_8: 8738443352485824072
+      happyplayerenging_9: 8552561074053262591
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

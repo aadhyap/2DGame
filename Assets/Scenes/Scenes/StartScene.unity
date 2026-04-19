@@ -960,7 +960,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.37
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1095,7 +1095,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 67
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1875,11 +1875,18 @@ MonoBehaviour:
   titleMusic: {fileID: 8300000, guid: c85a67caf5d6b4dccbd49dcc47afeaeb, type: 3}
   background: {fileID: 8300000, guid: c6c6d176b66ff469b94fc0b2ce7b8b47, type: 3}
   kiss: {fileID: 8300000, guid: c45ac0a7477f44ab59d5927da09ec862, type: 3}
-  compliment: {fileID: 8300000, guid: e5f494ab13d934e2191791b621812f73, type: 3}
+  complimentClips:
+  - {fileID: 8300000, guid: e5f494ab13d934e2191791b621812f73, type: 3}
+  - {fileID: 8300000, guid: 78a02fa9bcc464408b3417127ed567ea, type: 3}
+  - {fileID: 8300000, guid: a65b11419050c401a81a5b02e5eefd49, type: 3}
   fireball: {fileID: 8300000, guid: 25faee5c5c484489cae9a5df4a2930ea, type: 3}
-  enemy: {fileID: 0}
-  jump: {fileID: 0}
-  hit: {fileID: 0}
+  enemyVoiceClips:
+  - {fileID: 8300000, guid: 3e2a3eb7846304e2bab9301c1580edcc, type: 3}
+  - {fileID: 8300000, guid: 59832849901fc44588d44015fb9d945b, type: 3}
+  - {fileID: 8300000, guid: df10424f62ea945e08c0c61f8853b3eb, type: 3}
+  - {fileID: 8300000, guid: a8a43c2fe9ae9496297e8e7d3e21caa4, type: 3}
+  knightVoice: {fileID: 8300000, guid: 1c809c289b0424eb9886f68f1e3b1cc4, type: 3}
+  sfxVolumeMultiplier: 1.5
 --- !u!4 &2043120638
 Transform:
   m_ObjectHideFlags: 0

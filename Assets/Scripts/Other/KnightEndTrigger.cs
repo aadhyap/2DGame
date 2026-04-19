@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class KnightEndTrigger : MonoBehaviour
 {
-    [SerializeField] private string nextSceneName = "IntroScene"; // set in inspector
+    [SerializeField] private string nextSceneName = "EndScene"; // set in inspector
     [SerializeField] private float delay = 1f; // optional delay
 
     private bool triggered = false;
