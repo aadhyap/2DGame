@@ -41,26 +41,26 @@ public class ComplimentAnimationEvents : MonoBehaviour
             return;
         }
 
-        Debug.Log("PlayComplimentFill called");
+
 
         animator.SetBool(boolName, false);
 
-        Debug.Log("Set Animator bool " + boolName + " = false");
+
     }
 
     public void OnComplimentReady()
     {
-        Debug.Log("OnComplimentReady animation event fired");
+
 
         if (animator != null)
         {
             animator.SetBool(boolName, true);
-            Debug.Log("Set Animator bool " + boolName + " = true");
+        
         }
 
         if (player != null)
         {
-            Debug.Log("Calling reset on player object: " + player.gameObject.name + " | id=" + player.GetInstanceID());
+        
             player.OnComplimentReset();
         }
         else

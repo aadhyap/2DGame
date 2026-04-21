@@ -43,12 +43,12 @@ public class KissAnimationEvents : MonoBehaviour
 
     public void OnKissReady()
     {
-        Debug.Log("OnKissReady animation event fired");
+
 
         if (animator != null)
         {
             animator.SetBool(boolName, true);
-            Debug.Log("Set Animator bool " + boolName + " = true");
+
         }
 
         if (player != null)

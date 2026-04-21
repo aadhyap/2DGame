@@ -246,7 +246,8 @@ MonoBehaviour:
   complimentKey: 101
   kissKey: 102
   complimentAmount: 2
-  kissAmount: 4
+  kissAmount: 3
+  interactionPromptUI: {fileID: 0}
 --- !u!114 &6972268038695280755
 MonoBehaviour:
   m_ObjectHideFlags: 0

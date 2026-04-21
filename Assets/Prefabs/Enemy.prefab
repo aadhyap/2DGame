@@ -120,12 +120,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendshipLevel
   friendship: 10
+  enemyId: 
   heartEffectPrefab: {fileID: 3039080615482342387, guid: b1560e985b69f4dfeb15d9a97feb3bd3, type: 3}
   heartOffset: {x: 0, y: 0, z: 0}
   heartLifetime: 1
   heartSpawnPoint: {fileID: 0}
   enemyCollider: {fileID: 4878309302916420577}
   playerCollider: {fileID: 6337918555571086950, guid: 59fc4dd6ea8514b559e24ea2e9d35458, type: 3}
+  animator: {fileID: 0}
+  friendBoolName: isFriend
+  enemyAttackScript: {fileID: 0}
+  enemyMovementScript: {fileID: 0}
 --- !u!212 &2786474872405884568
 SpriteRenderer:
   serializedVersion: 2
@@ -261,8 +266,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13065647, y: -0.0203344}
-  m_Size: {x: 2.261322, y: 1.6656792}
+  m_Offset: {x: 0.1641118, y: -0.00037548254}
+  m_Size: {x: 1.792975, y: 1.705615}
   m_Direction: 1
 --- !u!95 &2185515610968800343
 Animator:

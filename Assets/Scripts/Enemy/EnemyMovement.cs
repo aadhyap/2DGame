@@ -66,15 +66,12 @@ public class EnemyAttack : MonoBehaviour
     {
         if (Time.time >= lastAttackTime + attackCooldown)
         {
-            Debug.Log("🔥 ATTACK TRIGGERED");
 
             lastAttackTime = Time.time;
             animator.SetBool("isAttacking", true);
-            animator.SetTrigger("attack");
         }
         else
         {
-            Debug.Log("⏳ On cooldown");
             SetIdle();
         }
     }

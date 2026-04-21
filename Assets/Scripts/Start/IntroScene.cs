@@ -9,13 +9,14 @@ public class IntroScene : MonoBehaviour
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Animator knightAnimator;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private SpriteRenderer playerSpriteRenderer;
 
     [Header("Dialogue UI")]
     [SerializeField] private TMP_Text dialogueText;
 
     [Header("Player Exit")]
     [SerializeField] private float walkSpeed = 2.5f;
-    [SerializeField] private float moveDuration = 2.5f; // 🔥 safer than exitX
+    [SerializeField] private float offscreenPadding = 1.5f;
 
     [Header("Knight Shake")]
     [SerializeField] private float shakeDuration = 0.3f;
@@ -33,6 +34,7 @@ public class IntroScene : MonoBehaviour
         if (playerAnimator == null) Debug.LogError("playerAnimator missing");
         if (knightAnimator == null) Debug.LogError("knightAnimator missing");
         if (playerTransform == null) Debug.LogError("playerTransform missing");
+        if (playerSpriteRenderer == null) Debug.LogError("playerSpriteRenderer missing");
         if (dialogueText == null) Debug.LogError("dialogueText missing");
 
         knightStartPos = knightAnimator.transform.position;
@@ -44,31 +46,27 @@ public class IntroScene : MonoBehaviour
     {
         dialogueText.text = "";
 
-        // Knight dialogue
         yield return SayKnight("MY SON...", "Yell", 1.3f, true);
         yield return SayKnight("GO FORTH AND PROVE YOURSELF.", "Yell", 1.7f, true);
         yield return SayKnight("We have a genocide to complete.", "Yell", 1.7f, true);
 
-        // Player reaction
         yield return SayPlayer("...", "Surprised", 1.0f);
 
-        // Knight continues
-        yield return SayKnight("Take up my blade and rid our land of those wretched goblins", "Yell", 3.6f, true);
+        yield return SayKnight("Take up my blade and kill those wretched goblins", "Yell", 3.6f, true);
         yield return SayKnight("Fulfill your prophecy—rise as the next Goblin Slayer, and carry on my legacy", "Yell", 3.6f, true);
         yield return SayKnight("I will see you at sundown to collect the skulls", "Yell", 2.6f, true);
 
         dialogueText.text = "";
 
-        // Player walks off screen (SAFE VERSION)
-        Debug.Log("Player walking off...");
-
         playerAnimator.SetBool("isRunning", true);
 
-        float timer = 0f;
+        Camera cam = Camera.main;
+        float cameraRightEdge = cam.transform.position.x + cam.orthographicSize * cam.aspect;
+        float playerHalfWidth = playerSpriteRenderer.bounds.extents.x;
+        float targetX = cameraRightEdge + playerHalfWidth + offscreenPadding;
 
-        while (timer < moveDuration)
+        while (playerTransform.position.x < targetX)
         {
-            timer += Time.deltaTime;
             playerTransform.position += Vector3.right * walkSpeed * Time.deltaTime;
             yield return null;
         }
@@ -78,7 +76,6 @@ public class IntroScene : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         Debug.Log("LOADING SampleScene NOW");
-
         SceneManager.LoadScene(gameplaySceneName);
     }
 
@@ -126,7 +123,6 @@ public class IntroScene : MonoBehaviour
             );
 
             knightAnimator.transform.position = knightStartPos + randomOffset;
-
             yield return null;
         }
 

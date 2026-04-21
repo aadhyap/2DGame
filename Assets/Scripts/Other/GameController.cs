@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -33,7 +32,9 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        player = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity);
+        Vector3 spawnPos = GameSession.checkpointPosition ?? playerSpawnPoint.position;
+
+        player = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
         knight = Instantiate(knightPrefab, knightSpawnPoint.position, Quaternion.identity);
 
         for (int i = 0; i < enemySpawns.Length; i++)
@@ -46,6 +47,12 @@ public class GameController : MonoBehaviour
                 enemySpawns[i].spawnPoint.position,
                 Quaternion.identity
             );
+
+            FriendshipLevel friendship = enemy.GetComponent<FriendshipLevel>();
+            if (friendship != null)
+            {
+                friendship.SetEnemyId("enemy_" + i);
+            }
 
             enemies.Add(enemy);
         }
@@ -63,7 +70,7 @@ public class GameController : MonoBehaviour
 
     private void ResetScene()
     {
-        Invoke("ResetSceneDelay", 2f);
+        Invoke(nameof(ResetSceneDelay), 2f);
     }
 
     private void ResetSceneDelay()

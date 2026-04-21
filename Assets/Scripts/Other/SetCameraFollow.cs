@@ -26,7 +26,7 @@ public class SetCameraFollow : MonoBehaviour
 
     private void SetFollow(GameObject player)
     {
-        Debug.Log("Setting state-driven camera target to: " + player.name);
+
 
         playerTransform = player.transform;
         playerAnimator = player.GetComponent<Animator>();
@@ -37,7 +37,7 @@ public class SetCameraFollow : MonoBehaviour
 
     private void FocusEnemyTemporarily(Transform enemy)
     {
-        Debug.Log("Camera received event for: " + enemy.name);
+
 
         if (enemy == null || playerTransform == null)
             return;
@@ -52,7 +52,7 @@ public class SetCameraFollow : MonoBehaviour
 
     private IEnumerator FocusRoutine(Transform enemy)
     {
-        Debug.Log("Camera focusing on enemy: " + enemy.name);
+
 
         vCam.Follow = enemy;
 
@@ -61,7 +61,7 @@ public class SetCameraFollow : MonoBehaviour
         {
             enemyAnimator.ResetTrigger(happyTriggerName);
             enemyAnimator.SetTrigger(happyTriggerName);
-            Debug.Log("Triggered happy animation on: " + enemy.name);
+     
         }
         else
         {
@@ -72,7 +72,7 @@ public class SetCameraFollow : MonoBehaviour
 
         if (playerTransform != null)
         {
-            Debug.Log("Camera returning to player");
+  
             vCam.Follow = playerTransform;
             vCam.m_AnimatedTarget = playerAnimator;
         }

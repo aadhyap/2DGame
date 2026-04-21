@@ -6127,6 +6127,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3a9762157bfb4af39236d2046f33328, type: 3}
+--- !u!212 &794875987 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6835266742387077329, guid: e3a9762157bfb4af39236d2046f33328, type: 3}
+  m_PrefabInstance: {fileID: 794875986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1629012050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,9 +6311,10 @@ MonoBehaviour:
   playerAnimator: {fileID: 583775929}
   knightAnimator: {fileID: 2126673431}
   playerTransform: {fileID: 583775928}
+  playerSpriteRenderer: {fileID: 794875987}
   dialogueText: {fileID: 2125842470}
   walkSpeed: 2.5
-  moveDuration: 2.5
+  offscreenPadding: 1.5
   shakeDuration: 0.3
   shakeAmount: 0.08
   gameplaySceneName: SampleScene
@@ -6420,7 +6426,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0.65180665, b: 0.6792453, a: 0}
+  m_BackGroundColor: {r: 0.3254902, g: 0.654902, b: 0.77254903, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -13,9 +13,10 @@ public class PlayerFriendshipInteraction : MonoBehaviour
     [Header("Friendship Gain")]
     [SerializeField] private int complimentAmount = 2;
     [SerializeField] private int kissAmount = 4;
-    AudioManager audioManager;
 
+    private AudioManager audioManager;
     private FriendshipLevel currentEnemyFriendship;
+    private InteractionPromptUI interactionPromptUI;
 
     private bool canUseCompliment = true;
     private bool canUseKiss = true;
@@ -23,6 +24,17 @@ public class PlayerFriendshipInteraction : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        interactionPromptUI = FindFirstObjectByType<InteractionPromptUI>();
+        Debug.Log("interactionPromptUI found: " + interactionPromptUI);
+    }
+
+    private void Start()
+    {
+        if (interactionPromptUI != null)
+        {
+            interactionPromptUI.SetInteractionAvailable(false);
+        }
     }
 
     private void Update()
@@ -44,36 +56,36 @@ public class PlayerFriendshipInteraction : MonoBehaviour
             }
 
             canUseCompliment = false;
+
             audioManager.PlayRandomCompliment();
             currentEnemyFriendship.AddFriendship(complimentAmount);
 
-            Debug.Log("Invoking ComplimentUsed event");
             ComplimentUsed?.Invoke();
         }
 
         if (Input.GetKeyDown(kissKey))
+        {
+            Debug.Log("F pressed");
+
+            if (currentEnemyFriendship == null)
             {
-                
-
-                if (currentEnemyFriendship == null)
-                {
-                    Debug.LogWarning("No enemy in range.");
-                    return;
-                }
-
-                if (!canUseKiss)
-                {
-                    Debug.Log($"Kiss not ready yet on {gameObject.name} | id={GetInstanceID()} | canUseKiss={canUseKiss}");
-                    return;
-                }
-
-                canUseKiss = false;
-                audioManager.PlaySFX(audioManager.kiss);
-
-                currentEnemyFriendship.AddFriendship(kissAmount);
-                Debug.Log("Invoking KissUsed event");
-                KissUsed?.Invoke();
+                Debug.LogWarning("No enemy in range.");
+                return;
             }
+
+            if (!canUseKiss)
+            {
+                Debug.Log("Kiss not ready yet.");
+                return;
+            }
+
+            canUseKiss = false;
+
+            audioManager.PlaySFX(audioManager.kiss);
+            currentEnemyFriendship.AddFriendship(kissAmount);
+
+            KissUsed?.Invoke();
+        }
     }
 
     public void OnComplimentReset()
@@ -85,6 +97,7 @@ public class PlayerFriendshipInteraction : MonoBehaviour
     public void OnKissReset()
     {
         canUseKiss = true;
+        Debug.Log("Kiss ready again");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -96,6 +109,11 @@ public class PlayerFriendshipInteraction : MonoBehaviour
 
         currentEnemyFriendship = friendshipLevel;
         currentEnemyFriendship.SetAsCurrentTarget();
+
+        if (interactionPromptUI != null)
+        {
+            interactionPromptUI.SetInteractionAvailable(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -109,6 +127,11 @@ public class PlayerFriendshipInteraction : MonoBehaviour
         {
             currentEnemyFriendship.ClearAsCurrentTarget();
             currentEnemyFriendship = null;
+
+            if (interactionPromptUI != null)
+            {
+                interactionPromptUI.SetInteractionAvailable(false);
+            }
         }
     }
 }
